@@ -53,7 +53,15 @@ defmodule NervesRpi4.MixProject do
       {:nerves_system_bbb, "~> 2.14", runtime: false, targets: :bbb},
       {:nerves_system_osd32mp1, "~> 0.10", runtime: false, targets: :osd32mp1},
       {:nerves_system_x86_64, "~> 1.19", runtime: false, targets: :x86_64},
-      {:nerves_system_grisp2, "~> 0.3", runtime: false, targets: :grisp2}
+      {:nerves_system_grisp2, "~> 0.3", runtime: false, targets: :grisp2},
+
+      # MyAdd
+      {:circuits_gpio, "~> 1.0"},
+      {:circuits_i2c, "~> 1.1"},
+      {:circuits_spi, "~> 1.3"},
+      {:circuits_uart, "~> 1.5"},
+      {:nerves_time, "~> 0.4"},
+      {:nerves_time_zones, "~> 0.2"},
     ]
   end
 

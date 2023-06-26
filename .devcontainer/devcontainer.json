@@ -23,7 +23,11 @@
 	"remoteEnv": {
 		"MIX_TARGET": "rpi4",
 		"WIFI_SSID": "xxxxxxxx",
-		"WIFI_PSK": "yyyyyyyy"
+		"WIFI_PSK": "yyyyyyyy",
+		"WIFI_IP_ADDRESS": "xxx.xxx.xxx.xxx",
+		"WIFI_IP_PREFIX": 24,
+		"WIFI_GATEWAY": "xxx.xxx.xxx.xxx",
+		"WIFI_DNS_ADDRESS": "xxx.xxx.xxx.xxx"
 	}
 
 	// Uncomment to connect as a non-root user. More info: https://aka.ms/vscode-remote/containers/non-root.

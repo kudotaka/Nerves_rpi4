@@ -35,6 +35,15 @@ defmodule NervesRpi4.Application do
       # Children for all targets except host
       # Starts a worker by calling: NervesRpi4.Worker.start_link(arg)
       # {NervesRpi4.Worker, arg},
+      {NervesRpi4.Worker, [:led]},
+#      {NervesRpi4.Worker, [:ledV2]},
+#      {NervesRpi4.Worker, [:m5env3V2]},
+#      {NervesRpi4.Worker, [:m5env2V2]},
+#      {NervesRpi4.Worker, [:button_not]},
+#      {NervesRpi4.Worker, [:button_not_not]},
+#      {NervesRpi4.Worker, [:button_oneshot]},
+#      {NervesRpi4.Worker, [:button_oneshot_reset]},
+#      {NervesRpi4.Worker, [:logicled]},
     ]
   end
 
