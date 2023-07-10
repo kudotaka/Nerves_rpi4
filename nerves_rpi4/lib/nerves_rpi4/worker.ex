@@ -12,7 +12,8 @@ defmodule NervesRpi4.Worker do
   def init(state = [:led]) do
     Logger.debug("#{__MODULE__}: genserver led blink start...")
     Task.async(fn -> LedBlink.init(:gpio_16, 16, 1000, 1000) end)
-    Task.async(fn -> LedBlink.init(:gpio_17, 17, 400, 600) end)
+#    Task.async(fn -> LedBlink.init(:gpio_17, 17, 400, 600) end)
+    Task.async(fn -> UartMhz19.init() end)
     {:ok, state}
   end
 
