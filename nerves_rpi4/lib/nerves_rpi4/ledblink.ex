@@ -9,10 +9,10 @@ defmodule LedBlink do
   end
 
   defp loop(gpio_name, on_delay, off_delay) do
-    Logger.debug("#{__MODULE__}: led_blink #{gpio_name} on...")
+#    Logger.debug("#{__MODULE__}: led_blink #{gpio_name} on...")
     GpioInOut.write(gpio_name, 1)
     Process.sleep(on_delay)
-    Logger.debug("#{__MODULE__}: led_blink #{gpio_name} off...")
+#    Logger.debug("#{__MODULE__}: led_blink #{gpio_name} off...")
     GpioInOut.write(gpio_name, 0)
     Process.sleep(off_delay)
     loop(gpio_name, on_delay, off_delay)

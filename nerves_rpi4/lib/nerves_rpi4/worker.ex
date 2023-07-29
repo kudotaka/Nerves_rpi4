@@ -12,9 +12,12 @@ defmodule NervesRpi4.Worker do
   def init(state = [:led]) do
     Logger.debug("#{__MODULE__}: genserver led blink start...")
     Task.async(fn -> LedBlink.init(:gpio_16, 16, 1000, 1000) end)
-#    Task.async(fn -> LedBlink.init(:gpio_17, 17, 400, 600) end)
-    Task.async(fn -> UartMhz19.init() end)
-    {:ok, state}
+    Task.async(fn -> LedBlink.init(:gpio_17, 17, 400, 600) end)
+#    Task.async(fn -> UartMhz19.init() end)
+#    Task.async(fn -> M5Env2V2.init(:sonsor_no0, :m5env2_no0, "i2c-1", 0x44) end)
+    Task.async(fn -> M5Env3V2.init(:sonsor_no1, :m5env3_no1, "i2c-1", 0x44) end)
+    Task.async(fn -> M5Env3prs.init(:sonsor_no2, :m5env3_no2, "i2c-1", 0x70) end)
+{:ok, state}
   end
 
   def init([:ledV2] = state) do

@@ -17,13 +17,13 @@ defmodule GpioInOut do
 
   @impl GenServer
   def init({pname, gpio_no, in_out}) do
-    Logger.debug("#{__MODULE__} init_open: #{pname} #{gpio_no}, #{in_out} ")
+#    Logger.debug("#{__MODULE__} init_open: #{pname} #{gpio_no}, #{in_out} ")
     Circuits.GPIO.open(gpio_no, in_out) # expected to return {:ok, gpioref}
   end
 
   @impl GenServer
   def handle_cast({:write, val}, gpioref) do
-    Logger.debug("#{__MODULE__} :write #{val} ")
+#    Logger.debug("#{__MODULE__} :write #{val} ")
     Circuits.GPIO.write(gpioref, val)
     {:noreply, gpioref}
   end
