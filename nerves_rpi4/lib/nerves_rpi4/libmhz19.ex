@@ -23,8 +23,9 @@ defmodule LibMhZ19 do
   def init(opts \\ []) do
     {:ok, uart} = UART.start_link()
     :ok =
+      UART.open(uart, opts[:tty],
 #      UART.open(uart, opts[:tty] || "ttyAMA0",
-      UART.open(uart, opts[:tty] || "ttyAMA4",
+#      UART.open(uart, opts[:tty] || "ttyAMA4",
 #      UART.open(uart, opts[:tty] || "ttyS0",
         speed: 9_600,
         data_bits: 8,
